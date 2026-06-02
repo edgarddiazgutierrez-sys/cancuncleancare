@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cancún Clean & Care — Lavado Profesional de Tapicerías</title>
+<meta name="description" content="Servicio profesional de lavado de tapicerías a domicilio en Cancún. Autos, salas, colchones, cortinas y más. Llámanos al 998 103 9045.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0C447C;
+    --blue: #185FA5;
+    --light: #B5D4F4;
+    --gray: #888780;
+    --white: #ffffff;
+    --off: #F4F8FD;
+    --dark: #0a1628;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 0 40px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(12, 68, 124, 0.97);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 30px rgba(0,0,0,0.15);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav-logo-text { color: white; }
+  .nav-logo-text .brand { font-size: 22px; font-weight: 900; letter-spacing: 3px; }
+  .nav-logo-text .sub { font-size: 7px; letter-spacing: 2.5px; color: var(--light); margin-top: 1px; }
+
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: white; }
+
+  .nav-cta {
+    background: #25D366;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+  }
+  .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(37,211,102,0.4); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #071830 0%, #0C447C 45%, #185FA5 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 40px 60px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    border: 1px solid rgba(181,212,244,0.08);
+    top: -200px; right: -200px;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(181,212,244,0.06);
+    bottom: -150px; left: -100px;
+  }
+
+  .hero-bg-drop {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.07;
+  }
+
+  .hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-left {}
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(181,212,244,0.15);
+    border: 1px solid rgba(181,212,244,0.3);
+    color: var(--light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+
+  .hero-title {
+    font-size: clamp(40px, 5vw, 68px);
+    font-weight: 900;
+    color: white;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+
+  .hero-title span { color: var(--light); }
+
+  .hero-desc {
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 440px;
+  }
+
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 32px rgba(37,211,102,0.3);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,211,102,0.4); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.18); }
+
+  /* Hero right — logo card */
+  .hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-logo-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 32px;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+  }
+
+  .hero-logo-card .brand-name {
+    font-size: 52px;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 6px;
+  }
+
+  .hero-logo-card .brand-full {
+    font-size: 11px;
+    color: var(--light);
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  .hero-logo-card .brand-tagline {
+    font-size: 9px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    background: var(--navy);
+    padding: 24px 40px;
+  }
+
+  .stats-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 12px;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--light);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 9px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 90px 40px; }
+
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--blue);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: clamp(32px, 4vw, 50px);
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+  }
+
+  .section-title span { color: var(--blue); }
+
+  .section-desc {
+    font-size: 17px;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.8;
+    max-width: 560px;
+    margin-bottom: 56px;
+  }
+
+  /* ── SERVICIOS ── */
+  #servicios { background: var(--off); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 36px 28px;
+    border: 1.5px solid #e8f0fb;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--navy), var(--blue));
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(12,68,124,0.12); border-color: var(--light); }
+  .service-card:hover::before { opacity: 1; }
+
+  .service-icon {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .service-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .service-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.7;
+  }
+
+  /* ── PRECIOS ── */
+  #precios { background: white; }
+
+  .prices-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .price-category {
+    background: var(--off);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1.5px solid #e8f0fb;
+  }
+
+  .price-cat-header {
+    background: var(--navy);
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .price-cat-header span {
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    border-bottom: 1px solid #e8f0fb;
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-row:nth-child(even) { background: white; }
+
+  .price-item { font-size: 14px; color: #333; font-weight: 500; }
+  .price-val { font-size: 15px; font-weight: 700; color: var(--blue); }
+
+  /* Combos */
+  .combos-section { margin-top: 40px; }
+
+  .combos-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--blue);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .combos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+  .combo-card {
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    border-radius: 20px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .combo-card::after {
+    content: '';
+    position: absolute;
+    right: -30px; top: -30px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .combo-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: var(--light);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 12px;
+  }
+
+  .combo-name { font-size: 16px; font-weight: 700; color: white; margin-bottom: 8px; }
+  .combo-items { font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 16px; }
+
+  .combo-pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .combo-before { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: line-through; }
+  .combo-now { font-size: 30px; font-weight: 900; color: white; }
+  .combo-currency { font-size: 12px; color: rgba(255,255,255,0.6); }
+
+  /* ── PROCESO ── */
+  #proceso { background: var(--off); }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+  }
+
+  .steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: calc(12.5% + 12px);
+    right: calc(12.5% + 12px);
+    height: 2px;
+    background: linear-gradient(90deg, var(--navy), var(--light));
+    z-index: 0;
+  }
+
+  .step-item {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-num {
+    width: 64px; height: 64px;
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    margin: 0 auto 20px;
+    box-shadow: 0 8px 24px rgba(12,68,124,0.25);
+  }
+
+  .step-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .step-desc { font-size: 13px; color: #666; line-height: 1.7; }
+
+  /* ── CONTACTO ── */
+  #contacto { background: white; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  .contact-info {}
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .contact-icon {
+    width: 48px; height: 48px;
+    background: var(--off);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .contact-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--gray); text-transform: uppercase; margin-bottom: 4px; }
+  .contact-value { font-size: 16px; font-weight: 700; color: var(--navy); }
+  .contact-sub { font-size: 13px; color: #777; margin-top: 2px; }
+
+  /* Form */
+  .contact-form { background: var(--off); border-radius: 24px; padding: 40px; border: 1.5px solid #e8f0fb; }
+
+  .form-title { font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 28px; }
+
+  .form-group { margin-bottom: 20px; }
+
+  .form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #dde8f5;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: var(--dark);
+    background: white;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--blue); }
+
+  .form-group textarea { resize: vertical; min-height: 100px; }
+
+  .form-submit {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(12,68,124,0.3); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark);
+    padding: 48px 40px 32px;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 28px;
+  }
+
+  .footer-brand .brand { font-size: 24px; font-weight: 900; color: white; letter-spacing: 4px; }
+  .footer-brand .sub { font-size: 9px; color: rgba(255,255,255,0.4); letter-spacing: 2px; margin-top: 4px; }
+
+  .footer-links { display: flex; gap: 28px; }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 12px; transition: color 0.2s; }
+  .footer-links a:hover { color: white; }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+  .footer-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .footer-whatsapp:hover { transform: scale(1.03); }
+
+  /* ── FLOATING WA BUTTON ── */
+  .float-wa {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 60px; height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(37,211,102,0.5);
+    text-decoration: none;
+    z-index: 99;
+    animation: pulse 2.5s infinite;
+    transition: transform 0.2s;
+  }
+  .float-wa:hover { transform: scale(1.1); animation: none; }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+    50% { box-shadow: 0 8px 48px rgba(37,211,102,0.8); }
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 4px;
+    background: linear-gradient(90deg, var(--navy), var(--blue), var(--light));
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 90px 20px 60px; }
+    .hero-content { grid-template-columns: 1fr; gap: 40px; }
+    .hero-right { display: none; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    section { padding: 60px 20px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .prices-grid { grid-template-columns: 1fr; }
+    .combos-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    .steps-grid::before { display: none; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .footer-top { flex-direction: column; gap: 24px; text-align: center; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">
+    <svg width="28" height="42" viewBox="0 0 72 110" xmlns="http://www.w3.org/2000/svg">
+      <path d="M36,4 C51,24 66,52 66,68 C66,88 52,104 36,104 C20,104 6,88 6,68 C6,52 21,24 36,4 Z" fill="white"/>
+      <circle cx="23" cy="74" r="13" fill="#185FA5" opacity="0.65"/>
+      <circle cx="46" cy="58" r="9" fill="#185FA5" opacity="0.55"/>
+      <circle cx="30" cy="38" r="5.5" fill="#185FA5" opacity="0.50"/>
+    </svg>
+    <div class="nav-logo-text">
+      <div class="brand">CC&C</div>
+      <div class="sub">CANCÚN CLEAN & CARE</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#servicios">Servicios</a>
+    <a href="#precios">Precios</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+    <a href="https://wa.me/529981039045" target="_blank" class="nav-cta">📲 WhatsApp</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+  <svg class="hero-bg-drop" width="400" height="600" viewBox="0 0 72 110" xmlns="http://www.w3.org/2000/svg">
+    <path d="M36,4 C51,24 66,52 66,68 C66,88 52,104 36,104 C20,104 6,88 6,68 C6,52 21,24 36,4 Z" fill="white"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">💧 CANCÚN, Q. ROO</div>
+      <h1 class="hero-title">Tapicerías<br><span>limpias.</span><br>Sin salir de casa.</h1>
+      <p class="hero-desc">Lavado profesional de tapicerías a domicilio. Autos, salas, colchones, cortinas y más — con equipo de vapor e inyección.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/529981039045?text=Hola,%20me%20interesa%20un%20servicio%20de%20tapicería" target="_blank" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="white" opacity="0.2"/><path d="M23.5 8.5C21.6 6.6 19.1 5.5 16.4 5.5C10.9 5.5 6.5 9.9 6.5 15.4C6.5 17.2 7 18.9 7.9 20.4L6.4 25.5L11.7 24C13.1 24.8 14.7 25.3 16.4 25.3C21.9 25.3 26.3 20.9 26.3 15.4C26.5 12.8 25.4 10.4 23.5 8.5Z" fill="white"/></svg>
+          Escríbenos ahora
+        </a>
+        <a href="#servicios" class="btn-secondary">Ver servicios ↓</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-logo-card">
+        <svg width="90" height="138" viewBox="0 0 72 110" xmlns="http://www.w3.org/2000/svg">
+          <path d="M36,4 C51,24 66,52 66,68 C66,88 52,104 36,104 C20,104 6,88 6,68 C6,52 21,24 36,4 Z" fill="white"/>
+          <circle cx="23" cy="74" r="13" fill="#185FA5" opacity="0.60"/>
+          <ellipse cx="18" cy="68" rx="4" ry="3" fill="white" opacity="0.70" transform="rotate(-35,18,68)"/>
+          <circle cx="46" cy="58" r="9" fill="#185FA5" opacity="0.55"/>
+          <ellipse cx="42" cy="53" rx="2.8" ry="2" fill="white" opacity="0.70" transform="rotate(-30,42,53)"/>
+          <circle cx="30" cy="38" r="5.5" fill="#185FA5" opacity="0.50"/>
+          <ellipse cx="27.5" cy="35" rx="1.8" ry="1.3" fill="white" opacity="0.70" transform="rotate(-25,27.5,35)"/>
+        </svg>
+        <div class="brand-name">CC&C</div>
+        <div class="brand-full">CANCÚN CLEAN & CARE</div>
+        <div class="brand-tagline">LAVADO PROFESIONAL DE TAPICERÍAS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">7</div>
+      <div class="stat-label">Servicios disponibles</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">A domicilio</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">Kärcher</div>
+      <div class="stat-label">Equipo profesional</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">$0</div>
+      <div class="stat-label">Costo de visita</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-inner">
+    <div class="section-tag">Nuestros servicios</div>
+    <h2 class="section-title">Todo lo que <span>lavamos</span></h2>
+    <p class="section-desc">Equipo profesional de inyección, succión y vapor para cada tipo de tapicería. Resultados visibles desde el primer servicio.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🚗</div>
+        <div class="service-name">Tapicería de autos</div>
+        <div class="service-desc">Asientos, alfombras y tapizado completo con inyección profunda y succión de alto poder.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛋️</div>
+        <div class="service-name">Salas y muebles</div>
+        <div class="service-desc">Juegos de sala, sillones y muebles tapizados. Eliminamos manchas, olores y ácaros.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛏️</div>
+        <div class="service-name">Colchones</div>
+        <div class="service-desc">Limpieza profunda con vapor Kärcher. Individual, matrimonial, queen y king size.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪟</div>
+        <div class="service-name">Cortinas y persianas</div>
+        <div class="service-desc">Sin descolgarlas. Lavado en seco con vapor para cortinas de tela y persianas.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪑</div>
+        <div class="service-name">Sillas y comedores</div>
+        <div class="service-desc">Sillas individuales o juegos completos de comedor. Telas, vinil y materiales mixtos.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">♨️</div>
+        <div class="service-name">Limpieza con vapor</div>
+        <div class="service-desc">Vaporizadora Kärcher SC3. Desinfección sin químicos. Ideal para familias con niños y mascotas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRECIOS -->
+<section id="precios">
+  <div class="section-inner">
+    <div class="section-tag">Precios</div>
+    <h2 class="section-title">Tarifas <span>transparentes</span></h2>
+    <p class="section-desc">Sin sorpresas. Precios fijos según el servicio. Cotización personalizada para trabajos especiales.</p>
+
+    <div class="prices-grid">
+      <div class="price-category">
+        <div class="price-cat-header"><span>🚗 Tapicería automotriz</span></div>
+        <div class="price-row"><span class="price-item">Auto compacto (completo)</span><span class="price-val">$900 – $1,000</span></div>
+        <div class="price-row"><span class="price-item">Auto mediano (completo)</span><span class="price-val">$1,000 – $1,100</span></div>
+        <div class="price-row"><span class="price-item">Camioneta / SUV</span><span class="price-val">$1,100 – $1,200</span></div>
+      </div>
+      <div class="price-category">
+        <div class="price-cat-header"><span>🛏️ Colchones</span></div>
+        <div class="price-row"><span class="price-item">Individual</span><span class="price-val">$450</span></div>
+        <div class="price-row"><span class="price-item">Matrimonial</span><span class="price-val">$550</span></div>
+        <div class="price-row"><span class="price-item">Queen / King size</span><span class="price-val">$650 – $700</span></div>
+      </div>
+      <div class="price-category">
+        <div class="price-cat-header"><span>🛋️ Salas y muebles</span></div>
+        <div class="price-row"><span class="price-item">Sala completa (3+2+1)</span><span class="price-val">$700 – $900</span></div>
+        <div class="price-row"><span class="price-item">Sillón individual</span><span class="price-val">$80 – $100</span></div>
+        <div class="price-row"><span class="price-item">Juego comedor (6 sillas)</span><span class="price-val">$480</span></div>
+      </div>
+      <div class="price-category">
+        <div class="price-cat-header"><span>🪟 Cortinas y persianas</span></div>
+        <div class="price-row"><span class="price-item">Panel de cortina</span><span class="price-val">$200</span></div>
+        <div class="price-row"><span class="price-item">Persiana (por pieza)</span><span class="price-val">$150 – $200</span></div>
+      </div>
+    </div>
+
+    <div class="combos-section">
+      <div class="combos-title">★ Combos especiales</div>
+      <div class="combos-grid">
+        <div class="combo-card">
+          <div class="combo-badge">COMBO 1</div>
+          <div class="combo-name">Auto + Colchón</div>
+          <div class="combo-items">✓ Tapicería auto completo<br>✓ Colchón matrimonial</div>
+          <div class="combo-pricing">
+            <span class="combo-before">$1,550</span>
+            <span class="combo-now">$1,350</span>
+            <span class="combo-currency">MXN</span>
+          </div>
+        </div>
+        <div class="combo-card">
+          <div class="combo-badge">COMBO 2</div>
+          <div class="combo-name">Sala + 2 Colchones</div>
+          <div class="combo-items">✓ Juego de sala completo<br>✓ 2 colchones matrimoniales</div>
+          <div class="combo-pricing">
+            <span class="combo-before">$1,900</span>
+            <span class="combo-now">$1,500</span>
+            <span class="combo-currency">MXN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROCESO -->
+<section id="proceso">
+  <div class="section-inner">
+    <div class="section-tag">Cómo funciona</div>
+    <h2 class="section-title">Así de <span>sencillo</span></h2>
+    <p class="section-desc">Cuatro pasos y listo. Sin complicaciones, sin traslados.</p>
+
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-title">Escríbenos</div>
+        <div class="step-desc">Manda un WhatsApp al 998 103 9045 con lo que necesitas lavar.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-title">Cotizamos</div>
+        <div class="step-desc">Te damos el precio exacto y agendamos el día y hora que mejor te quede.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-title">Llegamos</div>
+        <div class="step-desc">Vamos a tu domicilio en Cancún con todo el equipo. Sin costo de visita.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-title">¡Listo!</div>
+        <div class="step-desc">Tu tapicería queda limpia, fresca y desinfectada. Resultados garantizados.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="section-inner">
+    <div class="section-tag">Contáctanos</div>
+    <h2 class="section-title">¿Listo para <span>agendar?</span></h2>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📲</div>
+          <div>
+            <div class="contact-label">WhatsApp / Llamadas</div>
+            <div class="contact-value">998 103 9045</div>
+            <div class="contact-sub">Respuesta rápida por WhatsApp</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Zona de servicio</div>
+            <div class="contact-value">Cancún, Q. Roo</div>
+            <div class="contact-sub">Servicio a domicilio · Sin costo de visita</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Horario</div>
+            <div class="contact-value">Lun – Sáb, 8am – 7pm</div>
+            <div class="contact-sub">Agenda con anticipación</div>
+          </div>
+        </div>
+        <a href="https://wa.me/529981039045?text=Hola,%20me%20interesa%20un%20servicio%20de%20tapicería" target="_blank" class="btn-primary" style="margin-top:8px;">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="white" opacity="0.2"/><path d="M23.5 8.5C21.6 6.6 19.1 5.5 16.4 5.5C10.9 5.5 6.5 9.9 6.5 15.4C6.5 17.2 7 18.9 7.9 20.4L6.4 25.5L11.7 24C13.1 24.8 14.7 25.3 16.4 25.3C21.9 25.3 26.3 20.9 26.3 15.4C26.5 12.8 25.4 10.4 23.5 8.5Z" fill="white"/></svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-title">Solicita una cotización</div>
+        <div class="form-group">
+          <label>Tu nombre</label>
+          <input type="text" placeholder="¿Cómo te llamas?">
+        </div>
+        <div class="form-group">
+          <label>Teléfono / WhatsApp</label>
+          <input type="tel" placeholder="998 000 0000">
+        </div>
+        <div class="form-group">
+          <label>Servicio que necesitas</label>
+          <select>
+            <option value="">Selecciona un servicio...</option>
+            <option>Tapicería de auto</option>
+            <option>Sala y muebles</option>
+            <option>Colchón</option>
+            <option>Cortinas y persianas</option>
+            <option>Sillas y comedor</option>
+            <option>Combo Auto + Colchón</option>
+            <option>Combo Sala + 2 Colchones</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mensaje (opcional)</label>
+          <textarea placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
+        </div>
+        <button class="form-submit" onclick="enviarWA()">Enviar por WhatsApp →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand">CC&C</div>
+        <div class="sub">CANCÚN CLEAN & CARE — LAVADO PROFESIONAL DE TAPICERÍAS</div>
+      </div>
+      <div class="footer-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#precios">Precios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Cancún Clean & Care · Cancún, Quintana Roo, México</div>
+      <a href="https://wa.me/529981039045" target="_blank" class="footer-whatsapp">
+        📲 998 103 9045
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WA Button -->
+<a href="https://wa.me/529981039045?text=Hola,%20me%20interesa%20un%20servicio%20de%20tapicería" target="_blank" class="float-wa">
+  <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M23.5 8.5C21.6 6.6 19.1 5.5 16.4 5.5C10.9 5.5 6.5 9.9 6.5 15.4C6.5 17.2 7 18.9 7.9 20.4L6.4 25.5L11.7 24C13.1 24.8 14.7 25.3 16.4 25.3C21.9 25.3 26.3 20.9 26.3 15.4C26.5 12.8 25.4 10.4 23.5 8.5ZM16.4 23.6C14.9 23.6 13.4 23.2 12.1 22.4L11.8 22.2L8.7 23.1L9.6 20.1L9.4 19.8C8.5 18.4 8.1 16.9 8.1 15.4C8.1 10.8 11.8 7.1 16.5 7.1C18.7 7.1 20.8 8 22.3 9.5C23.8 11 24.7 13.1 24.7 15.4C24.7 20 21 23.6 16.4 23.6ZM21 17.6C20.7 17.5 19.3 16.8 19.1 16.7C18.8 16.6 18.6 16.6 18.4 16.9C18.2 17.2 17.7 17.8 17.5 18C17.3 18.2 17.2 18.2 16.9 18.1C16.6 18 15.6 17.6 14.4 16.6C13.5 15.8 12.9 14.8 12.7 14.5C12.5 14.2 12.7 14 12.8 13.9C13 13.7 13.1 13.6 13.3 13.4C13.4 13.2 13.5 13.1 13.6 12.9C13.7 12.7 13.6 12.5 13.6 12.4C13.5 12.2 13 10.9 12.7 10.3C12.5 9.7 12.2 9.8 12 9.8H11.5C11.3 9.8 10.9 9.9 10.7 10.2C10.4 10.5 9.8 11.1 9.8 12.4C9.8 13.7 10.7 14.9 10.9 15.2C11.1 15.4 12.9 18.2 15.7 19.3C16.4 19.6 16.9 19.8 17.4 19.9C18.1 20.1 18.7 20.1 19.2 20C19.8 19.9 20.9 19.3 21.1 18.6C21.4 17.9 21.4 17.4 21.3 17.3C21.3 17.7 21.2 17.7 21 17.6Z" fill="white"/>
+  </svg>
+</a>
+
+<script>
+function enviarWA() {
+  const nombre = document.querySelector('input[type="text"]').value || '';
+  const tel = document.querySelector('input[type="tel"]').value || '';
+  const servicio = document.querySelector('select').value || '';
+  const mensaje = document.querySelector('textarea').value || '';
+
+  let texto = `Hola, me interesa un servicio de CC&C.`;
+  if (nombre) texto += `\nNombre: ${nombre}`;
+  if (tel) texto += `\nTeléfono: ${tel}`;
+  if (servicio) texto += `\nServicio: ${servicio}`;
+  if (mensaje) texto += `\nMensaje: ${mensaje}`;
+
+  window.open(`https://wa.me/529981039045?text=${encodeURIComponent(texto)}`, '_blank');
+}
+</script>
+
+</body>
+</html>
